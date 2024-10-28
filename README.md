@@ -29,14 +29,13 @@ Develop an API in Laravel to manage comments on a post, supporting nested commen
 ### Technical Requirements
 
 1. **Model and Eloquent Relationships:**
-   - Define the `Comment` model with the necessary relationships to support nested comments (recursive, `hasMany` and `belongsTo`).
+   - Define the `Comment` model with the necessary relationships to support nested comments.
 
 2. **Scalable Notification System:**
    - Create a notification service that accepts the comment and channel as inputs, allowing new channels to be added in the future.
-   - Use interfaces to define the sending methods, ensuring the system is modular and scalable.
 
 3. **Seeder:**
-   - Create a seeder file that generates 100 comments with a hierarchical structure.
+   - Create a seeder file that generates 10000 comments with a hierarchical structure.
    - Include at least three levels of depth in some comment branches.
 
 ### Key Evaluation Points
@@ -48,5 +47,5 @@ Develop an API in Laravel to manage comments on a post, supporting nested commen
 
 ### Bonus
 
-- **Real-Time Notifications:** Implement (or describe how to implement) real-time notifications for the administrator using Laravel Echo and WebSockets.
+- **Real-Time Notifications:** Implement (or describe how to implement) real-time notifications for the administrator using Pusher Notifications.
 - **Unit Tests:** Include unit tests for the comments and notifications system.
