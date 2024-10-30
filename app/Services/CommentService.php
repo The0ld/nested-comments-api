@@ -5,7 +5,6 @@ namespace App\Services;
 use App\Models\User;
 use App\Models\Comment;
 use App\Events\CommentPosted;
-use App\Listeners\SendNewCommentNotification;
 use App\Repositories\CommentRepository;
 use Illuminate\Support\Facades\Gate;
 

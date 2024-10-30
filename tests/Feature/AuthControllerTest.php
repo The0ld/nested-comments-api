@@ -22,8 +22,7 @@ class AuthControllerTest extends TestCase
         ]);
     }
 
-    #[test]
-    public function it_logs_in_successfully_with_valid_credentials()
+    public function test_logs_in_successfully_with_valid_credentials()
     {
         $response = $this->postJson('/api/v1/login', [
             'email' => 'test@example.com',
@@ -39,8 +38,7 @@ class AuthControllerTest extends TestCase
             );
     }
 
-    #[test]
-    public function it_fails_login_with_invalid_credentials()
+    public function test_fails_login_with_invalid_credentials()
     {
         $response = $this->postJson('/api/v1/login', [
             'email' => 'test@example.com',
@@ -55,8 +53,7 @@ class AuthControllerTest extends TestCase
             );
     }
 
-    #[test]
-    public function it_fails_login_with_validation_errors()
+    public function test_fails_login_with_validation_errors()
     {
         // Case 1: Missing email
         $response = $this->postJson('/api/v1/login', [
